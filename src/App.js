@@ -80,9 +80,9 @@ const TodoApp = () => {
         <div class="container-fluid">
           <span class="navbar-brand h1">
             <img src={Logo} alt='logo' />
-            <span className='appname'> Quick Notes</span>
+            <span className='appname'> Quicks Notes</span>
           </span>
-          <span className='text-white'>Welcome to my Quick Notes App!</span>
+          <span className='text-white'>Welcome to my Quicks Notes App!</span>
         </div>
       </nav>
 
@@ -107,7 +107,7 @@ const TodoApp = () => {
         <div className='defautImg container'>
           <img src={pic} alt="Default Img" className='mx-auto d-block img-fluid'
             style={{ width: '350px' }} />
-          <h1 className='text-center mt-3'>Quick Notes</h1>
+          <h1 className='text-center mt-3'>Quicks Notes</h1>
           <p className='text-center'>Your digital companion for efficient note-taking and organization, anytime, anywhere.</p>
         </div>
       }
@@ -151,7 +151,7 @@ const TodoApp = () => {
         <div class="container">
           <span>
             – Thanks for visiting! – <br />
-            Quick Notes | <span class="far fa-copyright" aria-hidden="true"></span> 2023 All Rights Reserved.
+            Quicks Notes | <span class="far fa-copyright" aria-hidden="true"></span> 2023 All Rights Reserved.
           </span>
         </div>
       </footer>
