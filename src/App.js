@@ -33,7 +33,7 @@ const TodoApp = () => {
     if (newTodo.trim() === '') {
       return;
     }
-    setShowDefaultImage(false);
+    // setShowDefaultImage(false);
 
     if (editIndex !== -1) {
       const updatedTodos = [...todos];
@@ -67,6 +67,11 @@ const TodoApp = () => {
     setEditIndex(-1);
   };
 
+  // Remove default Image -----------
+  useEffect(() => {
+    setShowDefaultImage(todos.length === 0);
+  }, [todos]);
+
 
   return (
     <div>
@@ -75,9 +80,9 @@ const TodoApp = () => {
         <div class="container-fluid">
           <span class="navbar-brand h1">
             <img src={Logo} alt='logo' />
-            <span className='appname'> Quick Notes</span>
+            <span className='appname'> Quicks Notes</span>
           </span>
-          <span className='text-white'>Welcome to my Quick Notes App!</span>
+          <span className='text-white'>Welcome to my Quicks Notes App!</span>
         </div>
       </nav>
 
@@ -102,30 +107,32 @@ const TodoApp = () => {
         <div className='defautImg container'>
           <img src={pic} alt="Default Img" className='mx-auto d-block img-fluid'
             style={{ width: '350px' }} />
-          <h1 className='text-center mt-3'>Quick Notes</h1>
+          <h1 className='text-center mt-3'>Quicks Notes</h1>
           <p className='text-center'>Your digital companion for efficient note-taking and organization, anytime, anywhere.</p>
         </div>
       }
 
       {/* Show Todos field ----------------- */}
-      <div className='row showTodo text-center' style={{ marginBottom: "60px" }}>
+      <div className='row showTodo text-center' style={{ marginBottom: "80px" }}>
         {todos.map((todo, index) => (
-          <div key={index} className='col-md-4 mx-2 mt-2 card text-white bg-dark' style={{ maxWidth: "20rem" }}>
-            <div class="card-body">
-              <p class="card-text">
-                {index === editIndex ? (
-                  <textarea
-                    type="text"
-                    value={newTodo}
-                    onChange={handleInputChange}
-                    style={{ width: '100%' }}
-                  />
-                ) : (
-                  todo
-                )}
-              </p>
-              <div class="card-footer">
-                <div style={{}}>
+          <div key={index} className='col-sm-12 col-md-6 col-lg-4 mt-2' style={{ maxWidth: "20rem" }}>
+            <div className='card text-white bg-dark'>
+              <div className="card-body">
+                <p className="card-text">
+                  {index === editIndex ? (
+                    <textarea
+                      type="text"
+                      value={newTodo}
+                      onChange={handleInputChange}
+                      style={{ width: '100%' }}
+                    />
+                  ) : (
+                    todo
+                  )}
+                </p>
+              </div>
+              <div className="card-footer mb-1">
+                <div>
                   {index === editIndex ? (
                     <button onClick={handleFormSubmit} className='btn btn-outline-info btn-sm' style={{ float: 'right' }}>Save</button>
                   ) : (
@@ -141,12 +148,13 @@ const TodoApp = () => {
         ))}
       </div>
 
+
       {/* Footer */}
-      <footer class="container footer fixed-bottom  bg-dark text-white text-center " style={{ marginTop: "39px" }}>
+      <footer class="container footer fixed-bottom  bg-dark text-white text-center p-2" >
         <div class="container">
           <span>
             – Thanks for visiting! – <br />
-            Quick Notes | <span class="far fa-copyright" aria-hidden="true"></span> 2023 All Rights Reserved.
+            Quicks Notes | <span class="far fa-copyright" aria-hidden="true"></span> 2023 All Rights Reserved.
           </span>
         </div>
       </footer>
