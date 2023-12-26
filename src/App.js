@@ -302,7 +302,7 @@ const TodoApp = () => {
       {showDefaultImage &&
         <div className='defautImg container'>
           <img src={pic} alt="Default Img" className='mx-auto d-block img-fluid'
-            style={{ width: '350px' }} />
+            style={{ width: '250px' }} />
           <h1 className='text-center mt-3'>Quicks Notes</h1>
           <p className='text-center'>Your digital companion for efficient note-taking and organization, anytime, anywhere.</p>
         </div>
