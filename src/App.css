@@ -127,7 +127,7 @@ img {
 
 .todoDes {
     width: 100%;
-    resize: none;
+    /* resize: none; */
     background: none;
     color: #fff;
     margin-bottom: -20px;
