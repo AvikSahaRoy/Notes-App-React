@@ -5,7 +5,7 @@
 <h1>Notes App using React</h1>
 
 <p>
-  Quick Notes Website Link - <a href="https://quicksnotes.netlify.app/">Click Here</a>
+  Quick Notes Website Link - <a href="https://quicksnotes.netlify.app/" target="_blank">Click Here</a>
 </p>
 
 <p>Technologies Used - React</p>
